@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Jackson для JSON
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+
+    // SnakeYAML для YAML
+    implementation 'org.yaml:snakeyaml:1.30'
+
+    // JAXB для XML
+    implementation 'jakarta.xml.bind:jakarta.xml.bind-api:2.3.3'
+    implementation 'org.glassfish.jaxb:jaxb-runtime:2.3.3'
+}
+
+test {
+    useJUnitPlatform()
+}
